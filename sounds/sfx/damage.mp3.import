@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/damage.mp3-d9aab111406ee28955a347105ddcdb61.mp3str"
+
+[deps]
+
+source_file="res://sounds/sfx/damage.mp3"
+dest_files=[ "res://.import/damage.mp3-d9aab111406ee28955a347105ddcdb61.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

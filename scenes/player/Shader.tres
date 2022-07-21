@@ -1,0 +1,25 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://assets/characters/player_emission.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=10]
+code = "shader_type canvas_item;
+
+uniform sampler2D emission_texture;
+uniform vec4 glow_color : hint_color = vec4(1.0);
+
+void fragment() {
+	vec4 current_color = texture(TEXTURE, UV);
+	vec4 emission_color = texture(emission_texture, UV);
+	
+	if(emission_color.r > 0.0){
+		COLOR = emission_color + glow_color;
+	} else {
+	COLOR = current_color;
+}
+} "
+
+[resource]
+shader = SubResource( 10 )
+shader_param/glow_color = Color( 1, 1, 1, 1 )
+shader_param/emission_texture = ExtResource( 1 )

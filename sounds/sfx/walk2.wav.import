@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/walk2.wav-62dc58a95b9ec28195e68285b5cc3626.sample"
+
+[deps]
+
+source_file="res://sounds/sfx/walk2.wav"
+dest_files=[ "res://.import/walk2.wav-62dc58a95b9ec28195e68285b5cc3626.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

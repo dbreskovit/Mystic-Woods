@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/UI/transparent_black.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends CanvasLayer
+
+
+func _ready():
+	set_visible(false)
+
+func _input(event):
+	if event.is_action_pressed(\"ui_cancel\"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
+func _on_Button_pressed():
+	get_tree().paused = false
+	set_visible(false)
+
+func set_visible(is_visible):
+	for node in get_children():
+		node.visible = is_visible
+"
+
+[node name="CanvasLayer" type="CanvasLayer"]
+pause_mode = 2
+script = SubResource( 1 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -36.5
+margin_top = -10.0
+margin_right = 36.5
+margin_bottom = 10.0
+text = "Continuar"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

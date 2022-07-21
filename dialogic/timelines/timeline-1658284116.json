@@ -1,0 +1,27 @@
+{
+	"events": [
+		{
+			"audio": "play",
+			"audio_bus": "Master",
+			"event_id": "dialogic_030",
+			"event_name": "AudioEvent",
+			"file": "res://sounds/sfx/sans voice.wav",
+			"volume": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave amp=10 freq=2]Dizem as lendas que quando dormimos deixamos nosso corpo e viajamos para outros mundos… Comigo isso vem acontecendo, todas as vezes que durmo sou transportado para outros mundos onde meus pesadelos tomam uma forma gelatinosa e estranha. Agora só me resta enfrentá-los.[/wave]"
+		},
+		{
+			"change_scene": "res://scenes/World.tscn",
+			"event_id": "dialogic_041"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.3",
+		"file": "timeline-1658284116.json",
+		"name": "history"
+	}
+}
